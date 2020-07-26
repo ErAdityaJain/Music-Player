@@ -1,0 +1,305 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Music App</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<h1>This website is designed and developed by <a href="https://www.instagram.com/er_adityajn/">Aditya Jain</a></h1>
+<div class="music-container">
+
+	<div class="music-header">
+		<i class="fa fa-angle-left"></i>
+        	<div class="title">
+            	<p>My Music</p>
+            </div>
+        	<i class="fa fa-search"></i>
+	</div>
+    <div class="music-playlist">
+    	<div class="music-menu text-center">
+    		<div class="menu">
+        		<ul>
+            		<li><a href="#">Songs</a></li>
+                	<li><a href="#">Albums</a></li>
+            		<li><a href="#">Artist</a></li>
+            		<li><a href="#">Generes</a></li>
+           	 	</ul>
+        	</div>
+    	</div>
+        <div class="music-box">
+        	<div class="music-info">
+            	<div class="music-img">
+                	<img src="1.jpg">
+                </div>
+                <div class="a song">Happier</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="2.jpg">
+                </div>
+                <div class="b song">Girls Like You</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+                     
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="3.jpg">
+                </div>
+                <div class="c song">Memories</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="4.jpg">
+                </div>
+                <div class="d song">Perfect</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="5.jpg">
+                </div>
+                <div class="e song">Faded</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="6.jpg">
+                </div>
+               <div class="f song">Satisfy</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="7.jpg">
+                </div>
+                <div class="g song">Alone</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="8.jpg">
+                </div>
+                <div class="h song">Let Me Love You</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="9.jpg">
+                </div>
+                <div class="i song">Despacito</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="10.jpg">
+                </div>
+                <div class="j song">Teri Yaari</div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+            
+            <div class="music-info">
+            	<div class="music-img">
+                	<img src="11.jpg">
+                </div>
+               <div class="k song">Khayal Tera Mujhe Sone Nahi Deta</div>
+                </div>
+                <i class="fa fa-ellipsis-v"></i>
+            </div><hr>
+        </div>
+	</div>
+    
+</div>
+<script>
+ 
+var divlenght = document.querySelectorAll('.song').length;
+console.log(divlenght);
+
+for(var i=0; i<divlenght; i++) {
+ var demo = document.querySelectorAll('.song')[i].addEventListener('click',playsong);
+
+ var demo = document.querySelectorAll('.song')[i].addEventListener('dblclick',pausesong);
+}
+
+var song1 = new Audio();
+song1.src = "a.mp3";
+
+var song2 = new Audio();
+song2.src = "b.mp3";
+
+var song3 = new Audio();
+song3.src = "c.mp3";
+
+var song4 = new Audio();
+song4.src = "d.mp3";
+
+var song5 = new Audio();
+song5.src = "e.mp3";
+
+var song6 = new Audio();
+song6.src = "f.mp3";
+
+var song7 = new Audio();
+song7.src = "g.mp3";
+
+var song8 = new Audio();
+song8.src = "h.mp3";
+
+var song9 = new Audio();
+song9.src = "i.mp3";
+
+var song10 = new Audio();
+song10.src = "j.mp3";
+
+var song11 = new Audio();
+song11.src = "k.mp3";
+
+function playsong(){
+ var songId = this.innerHTML;
+ console.log(songId);
+
+ switch (songId) {
+  case "Happier":
+   song1.play();
+   break;
+
+  case "Girls Like You":
+   song2.play();
+   break;
+
+  case "Memories":
+   song3.play();
+   break;
+
+  case "Perfect":
+   song4.play();
+   break;
+
+  case "Faded":
+   song5.play();
+   break;
+
+  case "Satisfya":
+   song6.play();
+   break;
+
+  case "Alone":
+   song7.play();
+   break;
+
+  case "Let Me Love You":
+   song8.play();
+   break;
+
+  case "Despacito":
+   song9.play();
+   break;
+   
+  case "Let Me Love You":
+   song8.play();
+   break;
+
+  case "Despacito":
+   song9.play();
+   break;
+   
+  case "Teri Yaari":
+  	song10.play();
+	break;
+	
+  case "Khayal Tera Mujhe Sone Nahi Deta":
+  	song11.play();
+	break;
+
+  default:
+   console.log("wrong input");
+   break;
+ }
+}
+
+function pausesong(){
+ var songId = this.innerHTML;
+ console.log(songId);
+
+ switch (songId) {
+  case "Happier":
+   song1.pause();
+   break;
+
+  case "Girls Like You":
+   song2.pause();
+   break;
+
+  case "Memories":
+   song3.pause();
+   break;
+
+  case "Perfect":
+   song4.pause();
+   break;
+
+  case "Faded":
+   song5.pause();
+   break;
+
+  case "Satisfya":
+   song6.pause();
+   break;
+
+  case "Alone":
+   song7.pause();
+   break;
+
+  case "Let Me Love You":
+   song8.pause();
+   break;
+
+  case "Despacito":
+   song9.pause();
+   break;
+   
+  case "Teri Yaari":
+  	song10.pause();
+	break;
+	
+  case "Khayal Tera Mujhe Sone Nahi Deta":
+  	song11.pause();
+	break;
+
+  default:
+   console.log("wrong input");
+   break;
+ }
+}
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
